@@ -6,3 +6,5 @@ def find_max(lst):
         if num > maximum:
             maximum = num
     return maximum
+print(f"2. Max of [3, 1, 9, 2]: {find_max([3, 1, 9, 2])}")
+  
