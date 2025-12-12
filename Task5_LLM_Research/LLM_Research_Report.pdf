@@ -1,0 +1,67 @@
+What is an LLM? 
+
+A Large Language Model (LLM) is a type of artificial intelligence designed to understand, generate, and manipulate human language. These models are "large" because they are trained on massive datasets (petabytes of text) and contain billions of parameters. Examples include GPT-4, Claude, and Llama 3.
+
+
+How Does It Work? 
+
+LLMs rely on the Transformer architecture. Fundamentally, they work by predicting the next token (word or character) in a sequence.
+
+Tokenization: Text is broken down into numerical tokens.
+
+Attention Mechanism: The model analyzes the relationship between words in a sentence, allowing it to understand context (e.g., knowing what "it" refers to in a long paragraph).
+
+Training: The model is pre-trained on general text data and then fine-tuned (RLHF) for specific instructions and safety.
+
+
+
+Deploying an LLM Locally 
+
+Running an LLM locally ensures privacy and removes API costs. Common tools include:
+
+Ollama: The easiest tool for macOS/Linux (and Windows preview) to run models like Llama 3 or Mistral via a simple CLI.
+
+LM Studio: A GUI-based application that lets users download and chat with quantization-ready models (GGUF format).
+
+llama.cpp: A backend library optimized for Apple Silicon and standard CPUs, allowing models to run efficiently on consumer hardware.
+
+
+
+Hardware Requirements 
+
+GPU vs CPU: LLMs run significantly faster on GPUs (NVIDIA RTX series or Mac M-series chips) due to parallel processing. CPU inference is possible but slower.
+
+RAM/VRAM: The size of the model determines RAM needs.
+
+7 Billion parameters (quantized): ~8GB RAM.
+
+70 Billion parameters: ~48GB+ VRAM (usually requires dual GPUs).
+
+
+
+Running & Calling Locally 
+
+Using Ollama as an example:
+
+Command Line: Run ollama run llama3 to start a chat session in the terminal.
+
+API Call: Local tools often expose an OpenAI-compatible API.
+
+Bash
+
+curl http://localhost:11434/api/generate -d '{
+  "model": "llama3",
+  "prompt": "Why is the sky blue?"
+}'
+
+
+
+Use Cases 
+
+Code Generation: Assisting developers with boilerplate code and debugging.
+
+Summarization: Condensing long legal or technical documents.
+
+Chatbots: Customer support agents that can handle complex queries.
+
+Data Extraction: Converting unstructured text into JSON formats.
