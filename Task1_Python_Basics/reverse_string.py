@@ -4,3 +4,5 @@ def reverse_string(s):
     for char in s:
         reversed_s = char + reversed_s
     return reversed_s
+ print(f"4. Reverse 'Python': {reverse_string('Python')}")
+  
