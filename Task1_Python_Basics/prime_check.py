@@ -5,4 +5,4 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
-  
+print(f"5. Is 7 prime?: {is_prime(7)}")
